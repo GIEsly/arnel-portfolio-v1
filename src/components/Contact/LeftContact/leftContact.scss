@@ -1,0 +1,17 @@
+@use '../../../scss/index.scss' as *;
+
+.leftContact{
+    flex: 1;
+
+    h1{
+        color: myTheme(text);
+        line-height: .9em;
+        font-size: 2.5rem;
+        padding: 1em 0;
+
+        span{
+            color: myTheme(ascent);
+            font-style: italic;
+        }
+    }
+}

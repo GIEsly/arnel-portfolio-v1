@@ -1,0 +1,18 @@
+@use '../../scss//index.scss' as *;
+
+.top{
+    font-family: "JetBrains-Mono";
+    font-size: .6em;
+    color: myTheme(ascent);
+    text-transform: uppercase;
+    margin: 2em 0;
+    letter-spacing: .2em;
+    text-align: center;
+
+    // responsive media ---
+    @include bk(lg){
+        text-align: left;
+    }
+    // responsive media ---
+    
+}

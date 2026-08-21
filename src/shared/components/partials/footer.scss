@@ -1,0 +1,72 @@
+@use '../../../scss/index.scss' as *;
+
+.footer{
+    @include marginPadding-0();
+    @include grid-1(center);
+    text-align: center;
+    background-color: myTheme(b2);
+    padding: 1em;
+
+    // responsive media ---
+    @include bk(sm){
+        @include flex(center);
+        padding: .5em 1em;
+        margin-inline:auto;
+    }
+
+    @include bk(lg){
+        padding: .5em 3em;
+        margin-inline:auto;
+    }
+    @include bk(xl){
+        padding: .5em 7em;
+        margin-inline:auto;
+    }
+    @include bk(xxl){
+        padding: .5em 7em;
+        max-width: 1440px;
+        margin-inline:auto;
+    }
+    // responsive media ---
+
+        .logo-Container{
+            flex: 1;
+            .logo{
+                width: 17%;
+                margin-bottom: .5em;
+
+                // responsive media ---
+                @include bk(sm){
+                    @include marginPadding-0();
+                    width: 27%;
+                    float: left;
+                }
+                // responsive media ---
+            }
+        }
+
+        .info-Container{
+            flex: 4;
+            @include marginPadding-0();
+
+            // responsive media ---
+            @include bk(sm){
+                @include flex(end);
+            }
+            // responsive media ---
+
+            .ftinfo{
+                @include marginPadding-0();
+                padding: .5em 0;
+                color: myTheme(b1);
+                letter-spacing: .1em;
+                font-size: .4rem;
+
+                // responsive media ---
+                @include bk(sm){
+                    padding-left: 1em;
+                }
+                // responsive media ---
+            }
+        }
+}

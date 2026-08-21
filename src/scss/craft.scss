@@ -1,0 +1,133 @@
+@use '../scss/index.scss' as *;
+
+.craft{
+    @include marginPadding-0();
+    @include wrapper1();
+
+
+    // responsive media ---
+    @include bk(sm){
+        @include wrapper2();
+        margin-inline:auto;
+    }
+    @include bk(md){
+        @include wrapper3();
+        margin-inline:auto;
+    }
+    @include bk(xl){
+        @include wrapper4();
+        margin-inline:auto;
+    }
+    @include bk(xxl){
+        @include wrapper4();
+        max-width: 1440px;
+        margin-inline:auto;
+    }
+    // responsive media ---
+
+
+    .innerSection{
+        @include grid-1(center);
+
+        .left{
+            flex: 1;
+            @include grid-1(center);
+            gap: 1em;
+            margin:2em 0;
+
+            // responsive media ---
+            @include bk(sm){
+                @include flex(center);
+                gap: 1em;
+            }
+            @include bk(md){
+                @include marginPadding-0();
+                margin-bottom: 2em;
+            }
+            @include bk(lg){
+                margin: 2em 0;
+            }
+            // responsive media ---
+        }
+
+        .right{
+            flex: 1;
+            @include grid-1(center);
+            margin: 2em 0;
+
+            // responsive media ---
+            @include bk(lg){
+                @include marginPadding-0();
+                @include grid-1(start);
+                margin: 2em 0;
+            }
+            // responsive media ---
+
+            .innerRight{
+
+                // responsive media ---
+                @include bk(lg){
+                    @include flex(space-between);
+                    gap: 1em;
+                    margin: 2em 0;
+                }
+                // responsive media ---
+                .container{
+                    @include marginPadding-0();
+
+                    // responsive media ---
+                    @include bk(md){
+                        padding: 2em 4em;
+                        // background-color: yellow;
+                    }
+
+                    @include bk(lg){
+                        flex: 1;
+                        padding: .5em;
+                    }
+                    // responsive media ---
+
+                    .info{
+                        @include flex(space-between);
+                        padding: 1.5em 0;
+                        align-items: center;
+                        transition: all .3s ease-in-out;
+
+                        .title{
+                            font-size: 1.5rem;
+                            letter-spacing: .05em;
+                            @include marginPadding-0();
+                        }
+
+                        .position{
+                            @include marginPadding-0();
+                            font-family: "JetBrains-Mono";
+                            font-size: .7rem;
+                            color: myTheme(navbarText);
+                        }
+
+                        @include bl-b();
+
+                        &:hover{
+                            color: myTheme(ascent);
+                            // cursor: pointer;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    @include bl-b();
+}
+
+@keyframes circle {
+    from{
+        transform: scale(.5);
+        opacity: .3;
+    }
+    to {
+         transform: scale(.9);
+         opacity: .9;
+    }
+}

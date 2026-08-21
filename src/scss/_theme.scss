@@ -1,0 +1,17 @@
+@use "sass:map";
+
+$selectedColor: (
+    background: #0c0d0d,
+    h1-a: #f0ebe3,
+    ascent: #d8a667,
+    ascent2: #be7d2e,
+    text: #f0ece4,
+    navbarText: #817c77,
+    b1: #2c2c2c,
+    b2: #e6e4e1,
+    b22: #8f8f8f,
+);
+
+@function myTheme($color-name) {
+    @return map.get($selectedColor, $color-name);
+}

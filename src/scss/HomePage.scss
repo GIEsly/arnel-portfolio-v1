@@ -1,0 +1,38 @@
+@use './index.scss' as *;
+
+.home{
+    @include wrapper1();
+
+    // responsive media ---
+    @include bk(sm){
+        @include wrapper2();
+        margin-inline:auto;
+    }
+    @include bk(md){
+        @include wrapper3();
+        margin-inline:auto;
+    }
+    @include bk(xl){
+        @include wrapper4();
+        margin-inline:auto;
+    }
+    @include bk(xxl){
+        @include wrapper4();
+        max-width: 1440px;
+        margin-inline:auto;
+    }
+    // responsive media ---
+
+
+    .wrapper {
+        // responsive media ---
+        @include bk(sm){
+            @include flex(space-between);
+            gap: 1em;
+        }
+        // responsive media ---
+    }
+    @include bl-b();
+}
+
+

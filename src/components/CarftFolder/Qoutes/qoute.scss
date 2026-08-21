@@ -1,0 +1,26 @@
+@use '../../../scss/index.scss' as *;
+
+.qoutes{
+    padding: 1em .5em;
+
+    h2{
+        @include marginPadding-0();
+        font-size: 1.8rem;
+        line-height: 1.2em;
+        text-align: center;
+        
+        // responsive media ---
+        @include bk(md){
+            font-size: 3rem;
+        }
+        @include bk(xl){
+            padding: 0 2.5em;  
+            font-size: 4rem;   
+        }
+        // responsive media ---
+
+        span{
+            color: myTheme(ascent);
+        }
+    }
+}

@@ -1,0 +1,132 @@
+@use '../../../scss/index.scss' as *;
+
+.leftHome{
+    flex:1;
+
+    .innerH1{
+
+        h1{
+            @include marginPadding-0();
+            color: myTheme(b2);
+            line-height: .9em;
+            letter-spacing: -.02em;
+            text-align: center;
+
+            // responsive media ---
+            @include bk(sm){
+                text-align: left;
+                font-size: 2.8rem;
+            }
+
+            @include bk(md){
+                font-size: 3.5rem;
+            }
+
+            @include bk(lg){
+                font-size: 4rem;
+            }
+            @include bk(xxl){
+                font-size: 6rem;
+            }
+            // responsive media ---
+
+            span{
+                color:myTheme(ascent);
+                font-style: italic;
+            }
+        }
+    }
+
+    .lower{
+        padding-left: .7em;
+    }
+
+    .innerP{
+        text-align: center;
+        margin-top: 1em;
+
+        p {
+            font-size: 1.125rem;
+            line-height: 1.5em;
+            letter-spacing: .02em;
+            padding: 0 1em;
+            color: myTheme(b22);
+            // background-color: yellow;
+
+            // responsive media ---
+            @include bk(sm){
+                @include marginPadding-0();
+                text-align: left;
+                line-height: 1.125em;
+                font-size: 1.2rem;
+            }
+            @include bk(md){
+                font-size: 1.125rem;
+            }
+            @include bk(lg){
+                font-size: 1.3rem;
+            }
+            // responsive media ---
+
+            span{
+                padding-right: .3em;
+            }
+        }
+    }
+
+    .sroll{
+        padding-top: 3em;
+        color:myTheme(navbarText);
+        font-family: "Jetbrains-Mono";
+        font-style: normal;
+        font-size: .6rem;
+        text-transform: uppercase;
+        position: relative;
+        padding-left: 1.6em;
+        opacity: .8;
+        text-align: center;
+        // background-color: yellow;
+
+        // responsive media ---
+        @include bk(sm){
+            @include marginPadding-0();
+            padding: 2em 0 0 1.5em;
+            text-align: left;
+        }
+        // responsive media ---
+
+        &::before{
+            display: none;
+            content:'';
+            position:absolute;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            background-color: myTheme(ascent);
+            left: 9.5em;
+            top: 3em;
+            animation: circle .7s ease-in-out infinite alternate;
+            
+            // responsive media ---
+            @include bk(sm){
+                display: block;
+                left: 0;
+                top: 2em;
+            }
+            // responsive media ---
+
+        }
+    }
+
+}
+
+@keyframes circle {
+    from{
+        transform: scale(.5);
+        opacity: .3;
+    }
+    to {
+         transform: scale(.9);
+         opacity: .9;
+    }
+}

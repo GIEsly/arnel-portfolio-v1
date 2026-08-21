@@ -1,0 +1,80 @@
+@use '../../../../scss/' as *;
+
+.innerrightRight{
+    @include marginPadding-0();
+
+    .innerR{
+        display: none;
+        gap: 1.5em;
+
+        // responsive media ---
+        @include bk(md){
+            @include flex(space-between);
+        }
+        // responsive media ---
+
+        .span-I{
+            font-size: 6rem;
+            color: myTheme(ascent);
+            font-style: italic;
+            padding: 0;
+            margin: 0;
+
+            // responsive media ---
+            @include bk(md){
+                font-size: 7.2rem;
+            }
+            @include bk(lg){
+                font-size: 4.3rem;
+            }
+            // responsive media ---
+        }
+
+        .des{
+            @include marginPadding-0();
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+
+            // responsive media ---
+            // @include bk(sm){
+            //     line-height: 1.5em;
+            // }
+            // @include bk(lg){
+            //     line-height: 1.2em;
+            // }
+            // // @include bk(xl){
+            // //     font-size: 1.25rem;
+            // //     line-height: 1.2em;
+            // // }
+            // responsive media ---
+        }
+    }
+
+    // This is for mobile text info only ---
+    .innerM{
+        p{
+            @include marginPadding-0();
+            text-align: center;
+            font-size: 1.125rem;
+            line-height: 1.3em;
+            padding: 0 1em;
+            // responsive media ---
+            @include bk(ss){
+                @include marginPadding-0();
+                padding: 0 2em;
+            }
+            @include bk(mm){
+                @include marginPadding-0();
+                padding: 0 2em;
+            }
+            @include bk(sm){
+                @include marginPadding-0();
+                text-align: left;
+            }
+            @include bk(md){
+                display: none;
+            }
+            // responsive media ---
+        }
+    }
+}

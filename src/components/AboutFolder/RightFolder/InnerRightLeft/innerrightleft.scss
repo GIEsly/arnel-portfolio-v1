@@ -1,0 +1,41 @@
+@use '../../../../scss/index.scss' as *;
+
+.innerright-left{
+   @include marginPadding-0();
+   padding: 2em;
+   
+   // responsive media ---
+   @include bk(mm){
+       padding: 4em;
+    }
+    @include bk(sm){
+        @include marginPadding-0();
+    }
+    @include bk(md){
+        @include marginPadding-0();
+        align-items: start;
+    }
+    // responsive media ---
+    
+    img{
+        border-radius: .5em;
+        width: 100%;
+        object-fit: cover;
+
+        // responsive media ---
+        @include bk(sm){
+            height: 15em;
+            width: 12em;
+        }
+        @include bk(md){
+            padding-bottom: 0;
+        }
+        @include bk(lg){
+            height: 28em;
+            width: 20em;
+        }
+        // responsive media ---
+    }
+
+
+}

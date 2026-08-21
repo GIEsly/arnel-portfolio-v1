@@ -1,0 +1,93 @@
+@use '../../../../scss/' as *;
+
+.oneBox{
+    @include border();
+    padding: 1em;
+    border-radius: .5em;
+    transition: all .3s ease-in-out;
+    text-align: center;
+
+    // responsive media ---
+    @include bk(sm){
+        flex: 1.5;
+        border: none;
+        padding: .5em;
+        text-align: right;
+    }
+    @include bk(lg){
+        flex: 2;
+        @include border();
+        text-align: center;
+        padding: 2em;
+    }
+    // responsive media ---
+
+
+    &:hover{
+        border-right: 3px solid myTheme(ascent);
+    }
+
+    .cert{
+        display: inline-block;
+        font-family: "JetBrains-Mono";
+        font-size: .5rem;
+        color: myTheme(ascent);
+        text-transform: uppercase;
+        padding: 1em;
+        border:1px solid myTheme(ascent);
+        border-radius: .5em;
+        line-height: 1;
+        position: relative;
+        padding-left: 2.5em;
+        letter-spacing: .2em;
+        margin-bottom: 4em;
+
+        // responsive media ---
+        @include bk(sm){
+            margin-bottom: 2em;
+            border: none;
+        }
+        @include bk(lg){
+            border:1px solid myTheme(ascent);
+            margin-bottom: 4em;
+        }
+        // responsive media ---
+
+        &::before{
+            content:'';
+            position:absolute;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            background-color: myTheme(ascent);
+            left: 1em;
+            top: 1em;
+            animation: circle .7s ease-in-out infinite alternate;
+        }
+    }
+
+    h2{
+        @include marginPadding-0();
+        line-height: 1em;
+        font-size: 2.5rem;
+        margin-bottom: .6em;
+
+        // responsive media ---
+        @include bk(sm){
+            font-size: 1.8rem;
+            letter-spacing: .05em;
+        }
+        @include bk(md){
+            font-size: 2.5rem;
+            letter-spacing: .05em;
+            margin-bottom: .5em;
+        }
+        // responsive media ---
+
+    }
+    p{
+        @include marginPadding-0();
+        font-size: 1.125rem;
+        line-height: 1.3em;
+    }
+}

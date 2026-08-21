@@ -1,0 +1,16 @@
+@use './index.scss' as *;
+
+.footer{
+    @include flex(space-between);
+    max-width: 1440px;
+    margin-inline:auto;
+    padding: 1em 0;
+
+    .ftinfo{
+        font-family: 'JetBrains-Mono';
+        font-size: .6rem;
+        letter-spacing: .2em;
+        opacity: .5;
+        text-transform: uppercase;
+    }
+}

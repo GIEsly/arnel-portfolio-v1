@@ -1,0 +1,69 @@
+@use '../../../scss/index.scss' as *;
+
+.leftAbout{
+    flex: 1;
+
+    // responsive media ---
+    @include bk(md){
+        align-items: start;
+    }
+    // responsive media ---
+
+    p{  
+        @include marginPadding-0();
+        color:myTheme(ascent);
+        font-family: "JetBrains-Mono";
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        font-size: .6rem;
+        padding-left: 2.5em;
+        position: relative;
+        padding: 0 0 4em;
+        text-align: center;
+        
+        // responsive media ---
+        @include bk(md){
+            text-align: left;
+            padding-left: 2em;
+        }
+        // responsive media ---
+
+        &::before {
+            display: none;
+            content:'';
+            position: absolute;
+            width: 1.1em;
+            height: 1px;
+            background-color: myTheme(ascent);
+            top: 0.5em;
+            left: 9em;
+
+            // responsive media ---
+            @include bk(sm){
+                display: block;
+                left: 1em;
+            }
+            @include bk(md){
+                left: 0em;
+            }
+            // responsive media ---
+        }
+    }
+
+    h2{
+        text-align: center;
+        font-size: 1.8rem;
+        position: relative;
+
+        // respansive media ---
+        @include bk(md){
+            text-align: left;
+        }
+        // respansive media ---
+
+        span{
+            font-style: italic;
+            color: myTheme(ascent);
+        }
+    }
+}

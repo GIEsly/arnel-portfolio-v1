@@ -1,0 +1,26 @@
+@use '../../../../scss/' as *;
+.innerRightContact{
+    @include flex(space-between);
+    padding: 1em 0;
+
+    .contact-item{
+        // background-color: red;
+        @include bl-b();
+    }
+
+    .contact-title{
+        font-family: "JetBrains-Mono";
+        font-size: .9rem;
+        @include marginPadding-0();
+        color: myTheme(navbarText);
+    }
+
+    .contact-link{
+        font-size: 1rem;
+        @include marginPadding-0();
+        text-decoration: none;
+        color: myTheme(h1-a);
+        padding-left: auto;
+    }
+
+}

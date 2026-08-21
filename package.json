@@ -1,0 +1,32 @@
+{
+  "name": "myportfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview --open"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^9.6.1",
+    "bootstrap": "^5.3.8",
+    "ogl": "^1.0.11",
+    "react": "^19.2.7",
+    "react-countup": "^6.5.3",
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.18.1",
+    "react-scroll": "^1.9.3",
+    "react-scroll-trigger": "^0.6.14",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "oxlint": "^1.71.0",
+    "sass": "^1.101.0",
+    "vite": "^8.1.1"
+  }
+}

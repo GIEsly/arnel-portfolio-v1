@@ -1,0 +1,52 @@
+@use '../../../../scss/index.scss' as *;
+
+.signatureContainer{
+    @include border();
+    text-align: center;
+    padding: 1em;
+    border-radius: .5em;
+    margin-top: 2em;
+    transition: all .3s ease-in-out;
+
+    // responsive media ---
+    @include bk(md){
+        margin: 2em;
+    }
+    @include bk(lg){
+        @include marginPadding-0();
+        flex: 1;
+        padding:  3em;
+    }
+    // responsive media ---
+
+    &:hover{
+        border-left: 3px solid myTheme(ascent);
+    }
+
+    .title{
+        font-family: "Instrument-Serif";
+        color: myTheme(ascent);
+        font-size: 1.8rem;
+        padding-bottom: .5em;
+    }
+
+    p{
+        padding: 0;
+        font-size: 1.2rem;
+        line-height: 1.5em;
+        color: myTheme(h1-a);
+
+        // responsive media ---
+        @include bk(md){
+            line-height: 1.5em;
+
+            span{
+                color: myTheme(ascent);
+                font-weight: 600;
+                padding: 0 .5em;
+            }
+        }
+        // responsive media ---
+    }
+
+}

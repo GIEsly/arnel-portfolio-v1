@@ -1,0 +1,15 @@
+@use '../../../../scss/index.scss' as *;
+
+.info{
+
+    .title{
+        transform: translateX(0);
+        transition: all .2s ease-in-out;
+    }
+
+    &:hover .title{
+        color: myTheme(ascent);
+        transform: translateX(.5em);
+        transition: all .3s ease-in;
+    }
+}

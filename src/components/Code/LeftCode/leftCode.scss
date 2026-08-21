@@ -1,0 +1,62 @@
+@use '../../../scss/index.scss' as *;
+
+.leftCode{
+    flex: 1;
+    text-align: center;
+
+    .info{
+        color:myTheme(navbarText);
+        font-size: 1.125rem;
+
+        // responsive media ---
+        @include bk(mm){
+            padding: 0 2em;
+        }
+        @include bk(sm){
+            font-size: 1.125rem;
+        }
+        // responsive media ---
+    }
+    
+    .innerBtn{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: .5em;
+        padding: .5em;
+
+        // responsive media ---
+        @include bk(ss){
+            grid-template-columns: repeat(6, 1fr);
+            padding: 1em;
+        }
+        @include bk(mm){
+            grid-template-columns: repeat(7,1fr);
+        }
+        @include bk(sm){
+            @include marginPadding-0();
+            grid-template-columns: repeat(5,1fr);
+            margin-top: 2em;
+        }
+        @include bk(md){
+            grid-template-columns: repeat(6,1fr);
+        }
+        @include bk(lg){
+            flex: 1;
+            grid-template-columns: repeat(4,1fr);
+        }
+        @include bk(xxl){
+            grid-template-columns: repeat(5,1fr);
+        }
+        // responsive media ---
+        img{
+            width: 100%;
+        }
+        .icon{
+            @include marginPadding-0();
+            filter:invert(100%);
+            border-radius: .5em;
+            padding: .5em;
+            opacity: .4;
+        }
+    }
+}

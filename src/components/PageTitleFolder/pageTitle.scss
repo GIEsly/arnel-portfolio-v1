@@ -1,0 +1,23 @@
+@use '../../scss/index.scss' as *;
+
+.headerSection{
+    text-align: center;
+
+    // responsive media ---
+    @include bk(lg){
+        text-align: left;
+    }
+    // responsive media ---
+    .title{
+
+        h2{
+            @include marginPadding-0();
+            font-size: 1.8rem;
+            padding: 1em 0;
+
+            span{
+                padding-left: .2em;
+            }
+        }
+    }
+}

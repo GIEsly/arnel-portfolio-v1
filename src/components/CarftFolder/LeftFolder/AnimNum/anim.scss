@@ -1,0 +1,85 @@
+@use '../../../../scss/index.scss' as *;
+
+.animStyle{
+    // responsive media ---
+    @include bk(sm){
+        flex: 2;
+    }
+    // responsive media ---
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 1em;
+
+        // responsive media ---
+        @include bk(sm){
+            gap: .5em;
+        }
+        // responsive media ---
+
+        .countBox{
+            @include border();
+            text-align: center;
+            padding: .5em;
+            border-radius: .5em;
+            width: 9em;
+            height: auto;
+
+            &:hover .info{
+                color: myTheme(h1-a);
+            }
+
+            // responsive media ---
+            @include bk(ss){
+                width: auto;
+                padding: 1.7em;
+            }
+            @include bk(mm){
+                padding: 1.5em;
+                width: 12.2em;
+            }
+            @include bk(sm){
+                padding: .5em;
+                width: auto;
+            }
+            @include bk(lg){
+                border: none;
+            }
+            // responsive media ---
+
+            .CountAnim{
+                font-size: 2.5rem;
+                font-family: 'Instrument-Serif';
+                font-style: italic;
+                color: myTheme(ascent);
+
+                // responsive media ---
+                @include bk(ss){
+                    font-size: 3rem;
+                }
+                @include bk(sm){
+                    font-size: 2.5rem;
+                }
+                @include bk(md){
+                    font-size: 3.5rem;
+                }
+                // responsive media ---
+            }
+            .info{
+                font-size: .8rem;
+                letter-spacing: .05em;
+                line-height: 1.2em;
+                text-transform: uppercase;
+                color: myTheme(navbarText);
+                transition: all .3s ease-in-out;
+
+                // responsive media ---
+                @include bk(lg){
+                    font-size: 1rem;
+                }
+                // responsive media ---
+            }
+        }
+    }
+}

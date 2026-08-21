@@ -1,0 +1,60 @@
+@use "../../../scss/index.scss" as *;
+
+.rightCode{
+    flex: 1;
+    padding: 1em;
+    border: 1px solid myTheme(ascent);
+    border-radius: .5em;
+    text-align: center;
+    // responsive media ---
+    @include bk(sm){
+        padding: 1em;
+        text-align: center;
+    }
+    @include bk(lg){
+        flex: 2;
+        padding: 2em;
+    }
+    // responsive media ---
+
+    h2{
+        @include marginPadding-0();
+        font-size: 2.5rem;
+        line-height: 1em;
+        margin-top: .5em;
+        padding-bottom: .3em;
+
+        // responsive media ---
+        @include bk(sm){
+            font-size: 2.5rem;
+        }
+        // responsive media ---
+    }
+    .infoCode{
+        @include marginPadding-0();
+        font-size: 1.125rem;
+        
+        // responsive media ---
+        @include bk(sm){
+            font-size: 1.125rem;
+        }
+        // responsive media ---
+    }
+
+    .boxContainer{
+        background-color: myTheme(navbarText);
+        border-radius: .5em;
+        margin: 1em 0;
+        height: 15em;
+        max-width: 100%;
+        opacity: .1;
+    }
+
+    .toolsUse{
+        font-family: "JetBrains-Mono";
+        font-size: .7rem;
+        color: myTheme(navbarText);
+    }
+
+
+}

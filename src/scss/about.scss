@@ -1,0 +1,56 @@
+@use '../scss/index.scss' as *;
+
+.about{
+    @include marginPadding-0();
+    @include wrapper1();
+    // background-color: yellow;
+
+    // responsive media ---
+    @include bk(sm){
+        @include wrapper2();
+        margin-inline:auto;
+    }
+    @include bk(md){
+        @include wrapper3();
+        margin-inline:auto;
+    }
+    @include bk(xl){
+        @include wrapper4();
+        margin-inline:auto;
+    }
+    @include bk(xxl){
+        @include wrapper4();
+        max-width: 1440px;
+        margin-inline:auto;
+    }
+    // responsive media ---
+
+    .innerAbout{
+        // responsive media ---
+        @include bk(sm){
+            @include flex(space-between);
+            align-items: start;
+            gap: 1em;
+        }
+        // responsive media ---
+        .left{
+            flex: 1.1;
+        }
+
+        .right{
+            flex:3;
+            // responsive media ---
+            @include bk(sm){
+                @include grid-1(start);
+                flex-direction: column;
+                text-align: left;
+                gap: 1em;
+            }
+            @include bk(md){
+                @include grid-1(start);
+            }
+            // responsive media ---
+        }
+    }
+    @include bl-b();
+}

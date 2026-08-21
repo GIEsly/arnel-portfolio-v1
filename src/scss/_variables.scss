@@ -1,0 +1,33 @@
+
+@mixin bl-b{
+    border-bottom: 1px solid rgba(40, 40, 40, 0.6);
+}
+
+@mixin bl-UpDown{
+    border-bottom: 1px solid rgba(40, 40, 40, 0.6);
+    border-top: 1px solid rgba(40, 40, 40, 0.6);
+}
+
+@mixin border{
+    border: .5px solid rgba(72, 72, 72, 0.5);
+}
+
+@mixin marginPadding-0{
+    margin: 0;
+    padding: 0;
+}
+
+@mixin wrapper1{
+    padding: 3em .5em;
+}
+
+@mixin wrapper2{
+    padding:  2em 1em;
+}
+
+@mixin wrapper3{
+    padding:  2em 3em;
+}
+@mixin wrapper4{
+    padding:  4em 7em;
+}

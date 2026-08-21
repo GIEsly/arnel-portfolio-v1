@@ -1,0 +1,28 @@
+@use '../../../scss/index.scss' as *;
+
+.right{
+    flex:1;
+    @include marginPadding-0();
+    @include grid-1(center);
+
+    // responsive media ---
+    @include bk(lg){
+        padding: 0 3em;
+    }
+    @include bk(xl){
+        padding: 0 5em;
+    }
+    // responsive media ---
+
+
+    img{
+        width: 100%;
+        object-fit: cover;
+        border-radius: .5em;
+        transition: all .3s ease-in-out;
+
+        // responsive media ---
+
+        // responsive media ---
+    }
+}
