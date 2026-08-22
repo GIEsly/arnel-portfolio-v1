@@ -4,8 +4,11 @@
     flex:1;
 
     .innerH1{
-        transform: translateY(-5em);
+        transform: translateY(-100px);
         animation: scrolldown 1.5s ease-in-out forwards;
+        animation-delay: 0ms;
+        opacity: 0;
+
         h1{
             @include marginPadding-0();
             color: myTheme(b2);
@@ -45,6 +48,9 @@
     .innerP{
         text-align: center;
         margin-top: 1em;
+        animation: scrolldown 1.5s ease-in-out forwards;
+        animation-delay: .6s;
+        opacity: 0;
 
         p {
             font-size: 1.125rem;
@@ -135,7 +141,6 @@
 @keyframes scrolldown {
     from {
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        opacity: 0;
     } to {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         opacity: 1;

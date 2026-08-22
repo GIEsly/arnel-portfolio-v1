@@ -4,6 +4,7 @@
     flex:1;
     @include marginPadding-0();
     @include grid-1(center);
+    position: relative;
 
     // responsive media ---
     @include bk(lg){
@@ -15,14 +16,77 @@
     // responsive media ---
 
 
-    img{
+    .mainImg{
         width: 100%;
         object-fit: cover;
         border-radius: .5em;
-        transition: all .3s ease-in-out;
+        animation: scrollright 1.5s ease-in-out forwards;
+        animation-delay: .5s;
+        opacity: 0;
+    }
 
-        // responsive media ---
+    .sig{
+        .signature{
+            width: 6em;
+            position: absolute;
+            bottom: .7em;
+            right: 12.5em;
+            animation: textShow 1.5s ease-in-out forwards;
+            animation-delay: .8s;
+            opacity: 0;
 
-        // responsive media ---
+            // responsive media ---
+            @include bk(ss){
+                right: 16em;
+            }
+            @include bk(mm){
+                right: 19em;
+            }
+            @include bk(sm){
+                right: 11em;
+                bottom: .3em;
+                width: 5em;
+            }
+            @include bk(md){
+                right: 14.5em;
+                bottom: .6em;
+                width: 5em;
+            }
+            @include bk(lg){
+                right: 22.8em;
+                bottom: .6em;
+                width: 5em;
+            }
+            @include bk(xl){
+                right: 23.8em;
+                bottom: .6em;
+                width: 5em;
+            }
+            @include bk(xxl){
+                right: 30.4em;
+                bottom: .9em;
+                width: 6em;
+            }
+            // responsive media ---
+        }
+    }
+}
+
+@keyframes scrollright {
+    from {
+        transform: translateX(100px);
+    } to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes textShow {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    } to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
