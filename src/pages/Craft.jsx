@@ -5,7 +5,7 @@ import OneBox from '../components/CarftFolder/LeftFolder/OneBox/OneBox'
 // import FourBox from '../components/CarftFolder/LeftFolder/FourBox/FourBox'
 import SignatureContainer from '../components/CarftFolder/RightFolder/SignatureContainer/SignatureContainer'
 import Qoutes from '../components/CarftFolder/Qoutes/Qoutes'
-import PageTitle from '../components/PageTitleFolder/pageTitle'
+import PageTitle from '../components/PageTitleFolder/PageTitle'
 import Top from '../components/Top/Top'
 import AnimNum from '../components/CarftFolder/LeftFolder/AnimNum/AnimNum'
 
