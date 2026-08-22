@@ -6,12 +6,15 @@ import './footer.scss'
 const Footer = () => {
   return (
     <div className="footer">
-        <div className="logo-Container">
+        <div className="inner-footer">
+
           <img src={footerlogo} alt="footer logo" className="logo" />
-        </div>
-        <div className="info-Container">
-          <p className='ftinfo'>&copy; 2026 Lets make difference</p>
-          <p className='ftinfo' >Portfolio - v1</p>
+
+          <div className="info-Container">
+            <p className='ftinfo'>&copy; 2026 Lets make difference</p>
+            <p className='ftinfo' >P-v1</p>
+          </div>
+
         </div>
     </div>
   )

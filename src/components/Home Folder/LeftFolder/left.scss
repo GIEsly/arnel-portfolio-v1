@@ -4,7 +4,8 @@
     flex:1;
 
     .innerH1{
-
+        transform: translateY(-5em);
+        animation: scrolldown 1.5s ease-in-out forwards;
         h1{
             @include marginPadding-0();
             color: myTheme(b2);
@@ -128,5 +129,16 @@
     to {
          transform: scale(.9);
          opacity: .9;
+    }
+}
+
+@keyframes scrolldown {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        opacity: 0;
+    } to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        opacity: 1;
+        transform: translateY(0);
     }
 }
