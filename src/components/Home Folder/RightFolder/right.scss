@@ -37,11 +37,10 @@
 
             // responsive media ---
             @include bk(ss){
-                right: 16em;
+                right: 17.5em;
             }
             @include bk(mm){
-                right: 20em;
-                background-color: black;
+                right: 19em;
             }
             @include bk(sm){
                 right: 11em;
