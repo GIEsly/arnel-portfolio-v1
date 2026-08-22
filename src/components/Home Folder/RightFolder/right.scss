@@ -41,6 +41,7 @@
             }
             @include bk(mm){
                 right: 20em;
+                background-color: black;
             }
             @include bk(sm){
                 right: 11em;
